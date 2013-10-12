@@ -1,6 +1,5 @@
 /**
 *	A U T O T A G S
-*
 *	Automatic tag suggestions or keyword generation for text, using unsupervised
 *	semantic analysis.
 *

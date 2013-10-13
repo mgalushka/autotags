@@ -33,7 +33,7 @@
 var AUTOTAGS = {
 	'NAME' : 'AutoTags',
 	'VERSION' : 1.3,
-	'DEFAULT_COMPOUND_TAG_SEPARATOR' : ' ',
+	'DEFAULT_COMPOUND_TAG_SEPARATOR' : '-', // retrieved based on study data
 	'APPLY_STEMMING' : true, // If true then the Porter stemmer should be applied to all tokens (but not phrases or n-grams), this has some overhead
 	'BOUNDARY' : '##!##' // Compound terms will not be created across BOUNDARIES
 };
@@ -59,15 +59,15 @@ AUTOTAGS.createTagger = function( parameters ) {
 	this.SCORE_CUTOFF = 0; // Ignoring terms that score less than n
 
 	this.SINGLE_TERM_BOOST = 0.75;
-	this.WHITE_LIST_BOOST = 1.5; // This boost is applied to all words found in the white list
-	this.CAPITALIZATION_BOOST = 1.75; // This boost is applied once to capitalised tokens, and again if all caps
+	this.WHITE_LIST_BOOST = 0; // This boost is applied to all words found in the white list
+	this.CAPITALIZATION_BOOST = 0.75; // This boost is applied once to capitalised tokens, and again if all caps
 	this.NGRAM_BASED_ON_CAPITALISATION_BOOST = 3.5; // This boost is applied to capitalised bi- and trigrams
 	this.SPECIAL_TERM_BOOST = 2.5; // This boost is applied to capitalised bi- and trigrams
 	this.BIGRAM_BOOST = 2.5; // This is applied to bigrams that do not contain stopwords and whose individual tokens are longer than 2 characters
 	this.BIGRAM_ALREADY_DETECTED_BOOST = 0.25; // This boost is applied to all bigrams found to be wholly contained within a compound term detected based on capitalisation
 	this.TERM_FROM_COMPOUND_DOWNWEIGHT = 0.25; // This is applied to individual tokens within an n-gram (every time an n-gram is discovered)
 	
-	this.COMPOUND_TAG_SEPARATOR = AUTOTAGS.DEFAULT_COMPOUND_TAG_SEPARATOR; // Intra-tag (e.g. cool_gadget vs. cool gadget) separator to use
+	this.COMPOUND_TAG_SEPARATOR = "-";//AUTOTAGS.DEFAULT_COMPOUND_TAG_SEPARATOR; // Intra-tag (e.g. cool_gadget vs. cool gadget) separator to use
 	
 	// Remove all whitespace characters (certain white space characters are turned into boundaries)
 	this.WHITESPACE_EXPRESSION = /(\')?([^a-zA-Z0-9_\.\!\?\:\;\n\r\f\t])/g;

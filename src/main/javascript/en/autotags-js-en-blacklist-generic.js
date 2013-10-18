@@ -33,4 +33,4 @@ AUTOTAGS.BLACKLIST = { 'a':true,'about':true,'above':true,'across':true,'after':
 	'us':true,'use':true,'uses':true,'using':true,'very':true,'via':true,'want':true,'was':true,'wasn':true,'way':true,'we':true,'well':true,'were':true,'what':true,'whatever':true,
 	'when':true,'whence':true,'whenever':true,'where':true,'whereafter':true,'whereas':true,'whereby':true,'wherein':true,'whereupon':true,'wherever':true,
 	'whether':true,'which':true,'while':true,'whither':true,'who':true,'whoever':true,'whole':true,'whom':true,'whose':true,'why':true,'will':true,'with':true,'within':true,
-	'without':true,'would':true,'yeah':true,'year':true,'yes':true,'yet':true,'you':true,'your':true,'yours':true,'yourself':true,'yourselves':true };
+	'without':true,'would':true,'yeah':true,'year':true,'yes':true,'yet':true,'you':true,'your':true,'yours':true,'yourself':true,'yourselves':true, 'code':true, 'program': true, 'manual' : true, 'machine' : true, 'acronym': true, 'return' : true };

@@ -59,11 +59,21 @@ AUTOTAGS.createTagger = function( parameters ) {
 	this.SCORE_CUTOFF = 0; // Ignoring terms that score less than n
 
 	this.SINGLE_TERM_BOOST = 0.75;
-	this.WHITE_LIST_BOOST = 0; // This boost is applied to all words found in the white list
-	this.CAPITALIZATION_BOOST = 0.75; // This boost is applied once to capitalised tokens, and again if all caps
+
+	// original value
+	//this.WHITE_LIST_BOOST = 1.5; 
+	this.WHITE_LIST_BOOST = 1; // This boost is applied to all words found in the white list
+
+	this.CAPITALIZATION_BOOST = 1.75; // This boost is applied once to capitalised tokens, and again if all caps
+	
 	this.NGRAM_BASED_ON_CAPITALISATION_BOOST = 3.5; // This boost is applied to capitalised bi- and trigrams
+	//this.NGRAM_BASED_ON_CAPITALISATION_BOOST = 7;
+
 	this.SPECIAL_TERM_BOOST = 2.5; // This boost is applied to capitalised bi- and trigrams
+	
 	this.BIGRAM_BOOST = 2.5; // This is applied to bigrams that do not contain stopwords and whose individual tokens are longer than 2 characters
+	//this.BIGRAM_BOOST = 5;
+	
 	this.BIGRAM_ALREADY_DETECTED_BOOST = 0.25; // This boost is applied to all bigrams found to be wholly contained within a compound term detected based on capitalisation
 	this.TERM_FROM_COMPOUND_DOWNWEIGHT = 0.25; // This is applied to individual tokens within an n-gram (every time an n-gram is discovered)
 	

@@ -62,7 +62,7 @@ AUTOTAGS.createTagger = function( parameters ) {
 
 	// original value
 	//this.WHITE_LIST_BOOST = 1.5; 
-	this.WHITE_LIST_BOOST = 1; // This boost is applied to all words found in the white list
+	this.WHITE_LIST_BOOST = 5; // This boost is applied to all words found in the white list
 
 	this.CAPITALIZATION_BOOST = 1.75; // This boost is applied once to capitalised tokens, and again if all caps
 	
